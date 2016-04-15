@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Log in | Smapio 社内向け</title>
+  
+  <?php $canurl =SITE_URL; ?>
+  <link rel="canonical" href="<?php echo($canurl);?>" />
+  
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="<?php echo(SITE_URL)?>/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?php echo(SITE_URL)?>/AdminLTE_dist/css/AdminLTE.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="<?php echo(SITE_URL)?>/AdminLTE_plugins/iCheck/square/blue.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="http://smapio.sakura.ne.jp/smapioLogo/imgs/smapio.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://dev.smapio.com/smapio/images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://dev.smapio.com/smapio/images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://dev.smapio.com/smapio/images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="http://dev.smapio.com/smapio/images/ico/apple-touch-icon-57-precomposed.png">
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+</head>
+
+
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="http://www.smapio.com/"><img src="http://design.smapio.com/logo_bootstrap/imgs/sp_top_logo.png" width="217" height="37"></span></a>
+    <!--<a href="../../index2.html"><b>Smapio</b>co,.Ltd</a>-->
+  </div>
+  <!-- /.login-logo -->
+  
+  <div class="login-box-body">
+    <p class="login-box-msg">Sign in to start your session</p>
+
+    <!--<form action="http://smapio.sakura.ne.jp/sitemap.php" method="post">-->
+    <form name="login" id="login" action="#" method="post">
+      <div class="form-group has-feedback">
+        <input type="email" class="form-control" placeholder="Email" name="id" id="id">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Password" name="pass" id="pass">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <!--
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox"> Remember Me
+            </label>
+          </div>
+        </div>
+        -->
+        <!-- /.col -->
+        
+        <input type="hidden" name="m" value="login" />
+        <div class="col-xs-4">
+          <button type="button" class="btn btn-primary btn-block btn-flat" id="btn_login2">Sign In</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+    <br>
+    <div class="row" style="display:none">
+        <div class="col-xs-4">
+          <a href="#" id="btn_logout"><p class="btn btn-primary btn-block btn-flat">LOGOUT</p></a>
+        </div>
+    </div>
+    <br>
+    <div class="row" style="display:none">
+        <div class="col-xs-4">
+          <a href="#" id="btn_login2"><p class="btn btn-primary btn-block btn-flat">LOGIN</p></a>
+        </div>
+    </div>
+    <br >
+	<!--
+    <div class="social-auth-links text-center">
+      <p>- OR -</p>
+      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
+        Facebook</a>
+      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
+        Google+</a>
+    </div>
+    -->
+    <!-- /.social-auth-links -->
+
+	<!--
+    <a href="#">I forgot my password</a><br>
+    <a href="register.html" class="text-center">Register a new membership</a>
+	-->
+	
+	<div class="text-center small">
+	<p>- 注意 -</p>
+	<a href="http://www.smapio.com" class="text-center">このサイトは株式会社スマピオの社員向けです。<br>ご関係のない方はホームページにお戻りくださいませ。</a>
+	</div>
+  </div>
+  <!-- /.login-box-body -->
+    
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery 2.1.4 -->
+<script src="<?php echo(SITE_URL)?>/AdminLTE_plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="<?php echo(SITE_URL)?>/bootstrap/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="<?php echo(SITE_URL)?>/AdminLTE_plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(function() {
+	$('#btn_logout').click(function() {
+	
+		if (confirm('本当に') == true) {
+			$('#btn_logout').hide();
+			$.post(
+				'user_ajax.php',
+				{action:'logout'},
+				function (data) {
+					location.href = '/';
+				},
+				'text'
+			);
+		}
+	});
+	
+	$('#btn_login2').click(function() {
+	
+		var id = $('#id').val();
+		var pass = $('#pass').val();
+
+		var params = {
+			action: 'login',
+			id: $('#id').val(),
+			pass: $('#pass').val(),
+		};
+		
+		if (confirm('本当にログインしますか？') == true) {
+			$.post(
+				'http://smapio.sakura.ne.jp/spuser_ajax.php',
+				params,
+				function (data) {
+					//alert(data + ":" + data.message + ':' + data.result);
+					if (data.result == true) {
+						//$('#btn_login2').hide();
+						setInterval(function () { location.replace("http://smapio.sakura.ne.jp/sitemap.php")}, 1000);
+					} else {
+						//$('#btn_logout').hide();
+					}
+				},
+				'json'
+			);
+		}
+	});
+  });
+
+</script>
+
+</body>
+</html>
